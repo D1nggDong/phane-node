@@ -5,16 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PHANE | Sovereign AI OS</title>
     <style>
-        body { font-family: sans-serif; background: #0f172a; color: #f8fafc; text-align: center; padding: 50px; }
-        .btn { background: #38bdf8; color: #0f172a; padding: 15px 30px; text-decoration: none; border-radius: 8px; font-weight: bold; }
-        code { background: #1e293b; padding: 10px; border-radius: 5px; display: block; margin: 20px auto; width: fit-content; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: #0f172a; color: #f8fafc; text-align: center; padding: 50px; line-height: 1.6; }
+        .container { max-width: 800px; margin: 0 auto; }
+        h1 { font-size: 3rem; margin-bottom: 10px; color: #38bdf8; }
+        .tagline { font-size: 1.2rem; color: #94a3b8; margin-bottom: 40px; }
+        .install-box { background: #1e293b; padding: 20px; border-radius: 12px; border: 1px solid #334155; display: inline-block; margin: 20px 0; font-family: monospace; }
+        .btn { background: #38bdf8; color: #0f172a; padding: 12px 24px; text-decoration: none; border-radius: 8px; font-weight: bold; transition: 0.3s; }
+        .btn:hover { background: #7dd3fc; }
+        .features { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; text-align: left; margin-top: 50px; }
+        .feature-card { background: #1e293b; padding: 20px; border-radius: 8px; }
     </style>
 </head>
 <body>
-    <h1>🛰️ PHANE Sovereign OS</h1>
-    <p>The privacy-first agentic hub for Raspberry Pi, Mac, and Windows.</p>
-    <code>curl -sSL https://raw.githubusercontent.com/D1nggDong/phane-node/main/install.sh | bash</code>
-    <br><br>
-    <a href="https://github.com/D1nggDong/phane-node" class="btn">View on GitHub</a>
+    <div class="container">
+        <h1>🛰️ PHANE</h1>
+        <p class="tagline">The Sovereign AI OS for Raspberry Pi, Mac, and Windows.</p>
+        
+        <p>Install your local node with one command:</p>
+        <div class="install-box">
+            curl -sSL https://raw.githubusercontent.com/D1nggDong/phane-node/main/install.sh | bash
+        </div>
+        
+        <br><br>
+        <a href="https://github.com/D1nggDong/phane-node" class="btn">View Source on GitHub</a>
+
+        <div class="features">
+            <div class="feature-card">
+                <h3>🔒 Private & Secure</h3>
+                <p>Everything is encrypted locally. Your keys never leave your hardware.</p>
+            </div>
+            <div class="feature-card">
+                <h3>⚡ 1GB RAM Ready</h3>
+                <p>Built in Go to run perfectly on Raspberry Pi 4B and beyond.</p>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
