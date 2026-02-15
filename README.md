@@ -1,35 +1,34 @@
 # PHANE Sovereign OS 🛰️
-> **Live Website:** [phane.ai](https://D1nggDong.github.io/phane-node/)
+> **Official Site:** [askphane.com](https://askphane.com) | **Status:** v1.0.0-beta
 
-# PHANE Sovereign OS 🛰️
-> **Live Website:** [phane.ai](https://D1nggDong.github.io/phane-node/)
-
-# PHANE Sovereign OS 🛰️
-> **Status:** Public Beta | **Website:** [phane.ai](https://D1nggDong.github.io/phane-node/)
-
-PHANE is a lightweight, secure, and hardware-agnostic agentic hub designed to run on anything from a **Raspberry Pi 4B (1GB)** to a high-end Mac or Windows workstation.
+PHANE is a lightweight, secure, and hardware-agnostic agentic hub. Designed to run blazingly fast on **Raspberry Pi 4B (1GB)**, it provides a unified interface for local AI and cloud-based productivity tools.
 
 [![Build Status](https://github.com/D1nggDong/phane-node/actions/workflows/build.yml/badge.svg)](https://github.com/D1nggDong/phane-node/actions)
 
-## ✨ Key Features
-* **Sovereign AI:** Connect to local Ollama instances. Your data, your hardware.
-* **1GB RAM Optimized:** Built in Go to ensure even the smallest nodes stay fast.
-* **Encrypted Vault:** Sensitive API keys (Notion, etc.) are encrypted at rest with AES-256 GCM.
-* **Cross-Platform:** Native binaries for Linux (ARM/x64), macOS (Intel/M1), and Windows.
+## ✨ Sovereign Features
+* **Zero-Cloud Auth:** Secure local login and registration. Your credentials never leave your hardware.
+* **Ollama Integration:** Plug into local LLMs for private, uncensored intelligence.
+* **AES-256 Vault:** Industry-standard encryption for sensitive keys (Notion, etc.).
+* **Universal Binary:** Built in Go for effortless execution on Mac (M1/Intel), Windows, and Linux.
 
-## 🚀 Quick Install (Any System)
-Run the following command in your terminal to download the latest version for your specific hardware:
+## 🚀 One-Line Installation
+Deploy your node instantly with:
 
 \`\`\`bash
-curl -sSL https://raw.githubusercontent.com/D1nggDong/phane-node/main/install.sh | bash
+curl -sSL https://askphane.com/install.sh | bash
 \`\`\`
 
-## 🔧 Skills & Integrations
-### 📝 Notion (Active Development)
-We are currently building the Notion bridge. This will allow PHANE to:
-* Archive conversations directly to your Notion workspace.
-* Use Notion pages as a "Long-term Memory" for your local LLM.
-* Securely store your Notion Token in the PHANE Vault.
+## 🏗️ Architecture
+PHANE operates on a "Local-First" principle. While the landing page at **askphane.com** provides the gateway, the actual registration and login logic are handled by your individual node.
+
+
+
+## 🔧 Active Roadmap
+- [x] **Core OS:** Lightweight Go-based kernel.
+- [x] **Cross-Platform:** GitHub Actions automated builds.
+- [ ] **Notion Bridge:** Encrypted sync for long-term memory.
+- [ ] **Web Dashboard:** Local UI for node management.
+- [ ] **Subscription Model:** Tiered feature access for advanced users.
 
 ## 📄 License
-Distributed under the MIT License. See \`LICENSE\` for more information.
+Distributed under the MIT License. See `LICENSE` for more information.
