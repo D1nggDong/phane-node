@@ -2,6 +2,9 @@
 > **Live Website:** [phane.ai](https://D1nggDong.github.io/phane-node/)
 
 # PHANE Sovereign OS 🛰️
+> **Live Website:** [phane.ai](https://D1nggDong.github.io/phane-node/)
+
+# PHANE Sovereign OS 🛰️
 > **Status:** Public Beta | **Website:** [phane.ai](https://D1nggDong.github.io/phane-node/)
 
 PHANE is a lightweight, secure, and hardware-agnostic agentic hub designed to run on anything from a **Raspberry Pi 4B (1GB)** to a high-end Mac or Windows workstation.
