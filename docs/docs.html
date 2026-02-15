@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PHANE | Documentation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { background-color: #020617; color: #f8fafc; }
+        .glass { background: rgba(30, 41, 59, 0.7); backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,0.1); }
+        pre { background: #1e293b; padding: 1rem; border-radius: 0.5rem; overflow-x: auto; font-family: monospace; }
+    </style>
+</head>
+<body class="font-sans antialiased">
+    <nav class="w-full glass px-6 py-4 flex justify-between items-center fixed top-0">
+        <div class="text-2xl font-bold tracking-tighter text-sky-400"><a href="index.html">🛰️ PHANE</a></div>
+        <a href="index.html" class="text-sm hover:text-sky-400">Back to Home</a>
+    </nav>
+
+    <main class="pt-24 px-6 max-w-4xl mx-auto">
+        <h1 class="text-4xl font-extrabold mb-8 text-sky-400">Documentation</h1>
+        
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold mb-4">1. Installation</h2>
+            <p class="text-slate-400 mb-4">Run the sovereign installer on any Linux, Mac, or Windows machine:</p>
+            <pre>curl -sSL https://askphane.com/install.sh | bash</pre>
+        </section>
+
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold mb-4">2. Connecting Notion</h2>
+            <p class="text-slate-400 mb-4">To link your Notion workspace, use the built-in skill command:</p>
+            <pre>phane skill add notion</pre>
+            <p class="mt-4 text-sm text-slate-500 italic">Note: Your API key is encrypted with AES-256 GCM before being saved to the local vault.</p>
+        </section>
+
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold mb-4">3. Local AI (Ollama)</h2>
+            <p class="text-slate-400 mb-4">PHANE automatically detects local Ollama instances on port 11434.</p>
+        </section>
+    </main>
+
+    <footer class="py-10 text-center text-slate-500">
+        &copy; 2026 PHANE Documentation.
+    </footer>
+</body>
+</html>
