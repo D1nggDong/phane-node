@@ -4,41 +4,66 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PHANE | Sovereign AI OS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: #0f172a; color: #f8fafc; text-align: center; padding: 50px; line-height: 1.6; }
-        .container { max-width: 800px; margin: 0 auto; }
-        h1 { font-size: 3rem; margin-bottom: 10px; color: #38bdf8; }
-        .tagline { font-size: 1.2rem; color: #94a3b8; margin-bottom: 40px; }
-        .install-box { background: #1e293b; padding: 20px; border-radius: 12px; border: 1px solid #334155; display: inline-block; margin: 20px 0; font-family: monospace; }
-        .btn { background: #38bdf8; color: #0f172a; padding: 12px 24px; text-decoration: none; border-radius: 8px; font-weight: bold; transition: 0.3s; }
-        .btn:hover { background: #7dd3fc; }
-        .features { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; text-align: left; margin-top: 50px; }
-        .feature-card { background: #1e293b; padding: 20px; border-radius: 8px; }
+        body { background-color: #020617; color: #f8fafc; }
+        .glass { background: rgba(30, 41, 59, 0.7); backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,0.1); }
+        .glow { box-shadow: 0 0 20px rgba(56, 189, 248, 0.3); }
     </style>
 </head>
-<body>
-    <div class="container">
-        <h1>🛰️ PHANE</h1>
-        <p class="tagline">The Sovereign AI OS for Raspberry Pi, Mac, and Windows.</p>
-        
-        <p>Install your local node with one command:</p>
-        <div class="install-box">
-            curl -sSL https://raw.githubusercontent.com/D1nggDong/phane-node/main/install.sh | bash
+<body class="font-sans antialiased">
+    <nav class="fixed w-full z-50 glass px-6 py-4 flex justify-between items-center">
+        <div class="text-2xl font-bold tracking-tighter text-sky-400">🛰️ PHANE</div>
+        <div class="hidden md:flex space-x-8 font-medium">
+            <a href="#features" class="hover:text-sky-400 transition">Features</a>
+            <a href="https://github.com/D1nggDong/phane-node" class="hover:text-sky-400 transition">GitHub</a>
         </div>
-        
-        <br><br>
-        <a href="https://github.com/D1nggDong/phane-node" class="btn">View Source on GitHub</a>
+        <div class="flex space-x-4">
+            <a href="#" class="px-4 py-2 text-sm hover:text-sky-400 transition">Log In</a>
+            <a href="#" class="px-4 py-2 text-sm bg-sky-500 rounded-lg font-bold text-slate-900 hover:bg-sky-400 transition">Register</a>
+        </div>
+    </nav>
 
-        <div class="features">
-            <div class="feature-card">
-                <h3>🔒 Private & Secure</h3>
-                <p>Everything is encrypted locally. Your keys never leave your hardware.</p>
-            </div>
-            <div class="feature-card">
-                <h3>⚡ 1GB RAM Ready</h3>
-                <p>Built in Go to run perfectly on Raspberry Pi 4B and beyond.</p>
-            </div>
+    <section class="pt-32 pb-20 px-6 text-center">
+        <h1 class="text-5xl md:text-7xl font-extrabold mb-6 tracking-tight">
+            The <span class="text-sky-400">Sovereign</span> AI OS
+        </h1>
+        <p class="text-xl text-slate-400 max-w-2xl mx-auto mb-10">
+            Secure, lightweight agentic hub for Raspberry Pi, Mac, and Windows. 
+            Run local LLMs with 1GB RAM efficiency.
+        </p>
+        
+        <div class="max-w-xl mx-auto glass p-2 rounded-xl flex items-center mb-8 glow">
+            <code class="flex-1 text-sky-300 text-sm md:text-base font-mono pl-4">curl -sSL https://askphane.com/install.sh | bash</code>
         </div>
-    </div>
+
+        <div class="flex justify-center space-x-4">
+            <a href="https://github.com/D1nggDong/phane-node" class="px-8 py-4 glass rounded-xl font-bold hover:border-sky-500 transition">
+                View on GitHub
+            </a>
+        </div>
+    </section>
+
+    <section id="features" class="py-20 px-6 max-w-6xl mx-auto grid md:grid-cols-3 gap-8">
+        <div class="glass p-8 rounded-2xl">
+            <div class="text-sky-400 text-3xl mb-4">🔒</div>
+            <h3 class="text-xl font-bold mb-2">Encrypted Vault</h3>
+            <p class="text-slate-400">AES-256 GCM encryption for your Notion and API keys. Stay sovereign.</p>
+        </div>
+        <div class="glass p-8 rounded-2xl">
+            <div class="text-sky-400 text-3xl mb-4">⚡</div>
+            <h3 class="text-xl font-bold mb-2">1GB RAM Optimized</h3>
+            <p class="text-slate-400">Engineered in Go to run blazingly fast on Raspberry Pi 4B hardware.</p>
+        </div>
+        <div class="glass p-8 rounded-2xl">
+            <div class="text-sky-400 text-3xl mb-4">🚀</div>
+            <h3 class="text-xl font-bold mb-2">Notion Bridge</h3>
+            <p class="text-slate-400">Archive conversations and control your node directly from your workspace.</p>
+        </div>
+    </section>
+
+    <footer class="py-10 text-center text-slate-500 border-t border-slate-800">
+        &copy; 2026 PHANE Sovereign OS. Built for the 1GB RAM revolution.
+    </footer>
 </body>
 </html>
