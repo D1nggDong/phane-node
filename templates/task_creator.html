@@ -1,0 +1,35 @@
+<div class="glass-card" style="margin-top: 20px; border-color: var(--primary);">
+    <h3 class="neon-text" style="margin-top:0; font-size:0.9rem;">COMMAND CENTER</h3>
+    <p style="font-size: 0.75rem; color: #8892B0; margin-bottom: 15px;">Instruct your agent in natural language.</p>
+    
+    <div style="display: flex; gap: 10px;">
+        <input type="text" id="agent-command" placeholder="Ex: 'Watch Discord and save bugs to Notion'..." 
+               style="flex-grow: 1; background: rgba(0,0,0,0.3); border: 1px solid var(--border); padding: 12px; border-radius: 8px; color: white;">
+        <button onclick="deployTask()" class="btn-primary" style="padding: 0 20px; border-radius: 8px; border: none; background: var(--primary); color: white; font-weight: bold; cursor: pointer;">
+            DEPLOY
+        </button>
+    </div>
+
+    <div id="deployment-status" style="margin-top: 15px; font-size: 0.7rem; display: none;">
+        <span style="color: var(--primary);">●</span> <span id="status-text">Deploying autonomous loop...</span>
+    </div>
+</div>
+
+<script>
+function deployTask() {
+    const cmd = document.getElementById('agent-command').value;
+    const status = document.getElementById('deployment-status');
+    const statusText = document.getElementById('status-text');
+    
+    status.style.display = 'block';
+    statusText.innerText = "Analyzing intent via Ollama...";
+    
+    fetch('/api/task/deploy', {
+        method: 'POST',
+        body: JSON.stringify({ prompt: cmd }),
+        headers: { 'Content-Type': 'application/json' }
+    }).then(() => {
+        setTimeout(() => { statusText.innerText = "Agent is now monitoring 24/7."; }, 1500);
+    });
+}
+</script>

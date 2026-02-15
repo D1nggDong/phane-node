@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <title>PHANE // CENTRAL</title>
+    <style>
+        body { background: #080A0F; color: white; font-family: sans-serif; margin: 0; display: flex; }
+        .sidebar { width: 240px; background: #0B0E14; height: 100vh; padding: 30px; border-right: 1px solid #1A1D23; }
+        .main { flex-grow: 1; padding: 50px; background: radial-gradient(circle at top right, #112240, #080A0F); }
+        .node-card { background: rgba(255,255,255,0.03); border: 1px solid #1A1D23; border-radius: 12px; padding: 20px; margin-bottom: 20px; display: flex; justify-content: space-between; align-items: center; }
+        .status-pill { padding: 4px 12px; border-radius: 20px; font-size: 0.7rem; font-weight: bold; }
+        .status-online { background: rgba(0, 243, 255, 0.1); color: var(--primary); border: 1px solid var(--primary); }
+        .btn-upgrade { background: var(--primary); color: white; padding: 10px 20px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 0.9rem; }
+        .usage-bar { width: 100px; height: 6px; background: #1A1D23; border-radius: 3px; overflow: hidden; margin-top: 5px; }
+        .usage-fill { height: 100%; background: var(--primary); width: 45%; }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <h2 class="neon-text">PHANE</h2>
+        <nav style="margin-top: 50px;">
+            <div style="color: var(--primary); margin-bottom: 20px;">● My Fleet</div>
+            <div style="color: #444; margin-bottom: 20px;">Billing</div>
+            <div style="color: #444; margin-bottom: 20px;">Settings</div>
+        </nav>
+    </div>
+    <div class="main">
+        <header style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 40px;">
+            <div>
+                <h1 style="margin:0;">Fleet Command</h1>
+                <p style="color: #8892B0;">Managing 2 active nodes</p>
+            </div>
+            <a href="/upgrade" class="btn-upgrade">PRO PLAN ACTIVE</a>
+        </header>
+
+        <div class="node-card">
+            <div>
+                <div style="font-weight: bold;">Home-Server-01</div>
+                <div style="font-size: 0.8rem; color: #8892B0;">ID: PHANE-7A2B9X</div>
+                <div class="usage-bar"><div class="usage-fill" style="width: 20%;"></div></div>
+            </div>
+            <div style="text-align: right;">
+                <span class="status-pill status-online">PRO TUNNEL ACTIVE</span>
+                <div style="font-size: 0.7rem; color: #444; margin-top: 8px;">Uptime: 14d 2h 12m</div>
+            </div>
+        </div>
+
+        <div class="node-card">
+            <div>
+                <div style="font-weight: bold;">Remote-Edge-Node</div>
+                <div style="font-size: 0.8rem; color: #8892B0;">ID: PHANE-9911CC</div>
+                <div class="usage-bar"><div class="usage-fill" style="width: 85%;"></div></div>
+            </div>
+            <div style="text-align: right;">
+                <span class="status-pill status-online">PRO TUNNEL ACTIVE</span>
+                <div style="font-size: 0.7rem; color: #444; margin-top: 8px;">Uptime: 3d 18h 05m</div>
+            </div>
+        </div>
+
+        <div class="glass-card" style="margin-top: 40px; border-style: dashed; text-align: center; padding: 40px;">
+            <p style="color: #444;">Add a new system to your fleet</p>
+            <code style="background: black; padding: 10px; border-radius: 5px; color: var(--primary);">curl -sSL phane.ai/install.sh | bash</code>
+        </div>
+    </div>
+</body>
+</html>

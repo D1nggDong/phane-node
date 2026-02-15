@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <title>PHANE // SOVEREIGN OS</title>
+</head>
+<body>
+    <div class="sidebar">
+        <h2 class="neon-text">PHANE</h2>
+        <a href="/dash" class="nav-item active">● Dashboard</a>
+        <a href="/skills" class="nav-item">Marketplace</a>
+        <div style="margin-top:auto;">
+            <div class="glass-card" style="padding:10px; font-size:0.7rem; text-align:center;">
+                <span id="pulse-dot" style="color:var(--primary)">●</span> Node: Online
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        <h1>Node Overview</h1>
+        <div class="stat-grid">
+            <div class="glass-card">
+                <div style="font-size:0.7rem; color:#8892B0;">PLATFORM</div>
+                <div id="platform-name" style="font-size:1.2rem; font-weight:bold; margin-top:5px;">Detecting...</div>
+            </div>
+            <div class="glass-card">
+                <div style="font-size:0.7rem; color:#8892B0;">MEMORY FLOOR</div>
+                <div style="font-size:1.2rem; font-weight:bold; margin-top:5px;">1GB Optimized</div>
+            </div>
+            <div class="glass-card">
+                <div style="font-size:0.7rem; color:#8892B0;">LLM ENGINE</div>
+                <div style="font-size:1.2rem; font-weight:bold; margin-top:5px;" class="neon-text">Ollama (Local)</div>
+            </div>
+        </div>
+
+        <div class="glass-card">
+            <h3>Autonomous Reasoning Log</h3>
+            <div id="logs" style="font-family:monospace; font-size:0.8rem; color:#8892B0;">
+                [IDLE] Awaiting task via local network...
+            </div>
+        </div>
+    </div>
+    <script>
+        document.getElementById('platform-name').innerText = navigator.platform;
+    </script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+phane
+phane-*
+dist/
+*.exe
+*.zip
+build_all.sh
+package_release.sh
+*.db
+*.db-journal
+.env
+vault.key
+.DS_Store

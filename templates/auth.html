@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <title>PHANE // ACCESS</title>
+    <style>
+        body { background: #0B0E14; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; }
+        input { background: rgba(255,255,255,0.05); border: 1px solid var(--border); padding: 12px; border-radius: 8px; color: white; margin-bottom: 15px; width: 100%; box-sizing: border-box; }
+        .btn-full { background: var(--primary); color: white; border: none; padding: 12px; border-radius: 8px; width: 100%; font-weight: bold; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <div class="glass-card" style="width: 350px;">
+        <h2 class="neon-text">SOVEREIGN ACCESS</h2>
+        <p style="color: var(--text-dim); font-size: 0.8rem; margin-bottom: 25px;">Enter your node credentials</p>
+        <form action="/dash">
+            <input type="text" placeholder="Node ID" required>
+            <input type="password" placeholder="Master Vault Key" required>
+            <button type="submit" class="btn-full">Unlock Node</button>
+        </form>
+        <p style="font-size: 0.7rem; color: #444; margin-top: 20px;">Local encryption keys are never sent to the cloud.</p>
+    </div>
+</body>
+</html>

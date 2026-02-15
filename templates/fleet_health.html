@@ -1,0 +1,23 @@
+<div class="glass-card" style="margin-top: 20px;">
+    <h3 style="margin-top:0; font-size:0.9rem;" class="neon-text">SYSTEM VITALITY</h3>
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; font-size: 0.8rem;">
+        <div>
+            <span style="color:#8892B0;">OS:</span> <span id="os-type">Detecting...</span>
+        </div>
+        <div>
+            <span style="color:#8892B0;">RAM:</span> <span id="ram-usage">-- / --</span>
+        </div>
+        <div>
+            <span style="color:#8892B0;">VAULT:</span> <span id="vault-status" style="color:var(--primary);">ENCRYPTED</span>
+        </div>
+        <div>
+            <span style="color:#8892B0;">UPTIME:</span> <span id="uptime">00:00:00</span>
+        </div>
+    </div>
+</div>
+
+<script>
+    // In a real build, these would be populated by your Go backend
+    document.getElementById('os-type').innerText = navigator.platform;
+    // We'll hook the actual RAM/Uptime into the WebSocket Pulse next
+</script>

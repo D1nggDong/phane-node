@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <title>PHANE // INITIALIZE VAULT</title>
+    <style>
+        body { background: #0B0E14; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; }
+        .warning-box { border: 1px solid #442222; background: rgba(255, 0, 0, 0.05); padding: 15px; border-radius: 8px; margin-bottom: 20px; font-size: 0.8rem; color: #ff6b6b; }
+        input { background: rgba(255,255,255,0.05); border: 1px solid var(--border); padding: 12px; border-radius: 8px; color: white; margin-bottom: 15px; width: 100%; box-sizing: border-box; }
+        .btn-init { background: var(--primary); color: white; border: none; padding: 12px; border-radius: 8px; width: 100%; font-weight: bold; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <div class="glass-card" style="width: 400px;">
+        <h2 class="neon-text">VAULT INITIALIZATION</h2>
+        <div class="warning-box">
+            ⚠️ <strong>IMPORTANT:</strong> This key is never stored. If you lose it, your encrypted skills cannot be recovered.
+        </div>
+        <p style="color: var(--text-dim); font-size: 0.8rem; margin-bottom: 20px;">Create your Master Vault Key to secure your local node.</p>
+        <form action="/initialize-vault" method="POST">
+            <input type="password" name="master_key" placeholder="Create Strong Master Key" required>
+            <input type="password" name="confirm_key" placeholder="Confirm Master Key" required>
+            <button type="submit" class="btn-init">Initialize Sovereign Node</button>
+        </form>
+    </div>
+</body>
+</html>

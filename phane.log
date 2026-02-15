@@ -1,0 +1,5 @@
+✅ PHANE WHATSAPP IS ONLINE
+16:41:55.137[36m [Client INFO] Successfully authenticated[0m
+16:43:13.309[33m [Client WARN] Received stream end frame[0m
+16:43:13.309[36m [Client INFO] Got replaced stream error, sending StreamReplaced event[0m
+16:43:13.463[31m [Client/Socket ERROR] Error reading from websocket: failed to get reader: failed to read frame header: EOF[0m

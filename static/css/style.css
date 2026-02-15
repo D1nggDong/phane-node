@@ -1,0 +1,18 @@
+:root {
+    --primary: #00A3FF;
+    --primary-glow: rgba(0, 163, 255, 0.3);
+    --bg-dark: #0B0E14;
+    --bg-glass: rgba(255, 255, 255, 0.05);
+    --border: rgba(255, 255, 255, 0.1);
+    --text: #E0E6ED;
+}
+body { background: var(--bg-dark); color: var(--text); font-family: 'Inter', sans-serif; margin: 0; padding: 20px; }
+.glass-card { 
+    background: var(--bg-glass); 
+    backdrop-filter: blur(15px); 
+    border: 1px solid var(--border); 
+    padding: 30px; 
+    border-radius: 15px; 
+    box-shadow: 0 8px 32px rgba(0,0,0,0.5);
+}
+.neon-text { color: var(--primary); text-shadow: 0 0 10px var(--primary-glow); }

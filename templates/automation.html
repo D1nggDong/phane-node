@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PHANE // AUTOMATION</title>
+    <style>
+        :root { --neon: #00ff41; --glass: rgba(255, 255, 255, 0.03); --border: rgba(255, 255, 255, 0.1); }
+        body { background: #000; color: white; font-family: 'Inter', sans-serif; margin: 0; display: flex; height: 100vh; }
+        .sidebar { width: 280px; background: rgba(10,10,10,0.8); backdrop-filter: blur(20px); border-right: 1px solid var(--border); padding: 40px 20px; }
+        .main { flex-grow: 1; padding: 50px; background: radial-gradient(circle at 0% 100%, #0a1a0a 0%, #000 50%); overflow-y: auto; }
+        .glass-panel { background: var(--glass); backdrop-filter: blur(10px); border: 1px solid var(--border); border-radius: 20px; padding: 30px; margin-bottom: 20px; }
+        .task-row { display: flex; justify-content: space-between; align-items: center; padding: 15px 0; border-bottom: 1px solid #222; }
+        .btn-add { background: var(--neon); color: #000; border: none; padding: 10px 20px; border-radius: 5px; font-weight: bold; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <h2 style="color:var(--neon); letter-spacing:-2px;">PHANE</h2>
+        <a href="/dashboard" style="color:#888; text-decoration:none; display:block; margin: 20px 0;">Dashboard</a>
+        <a href="/automation" style="color:var(--neon); text-decoration:none; display:block; margin: 20px 0;">● Automations</a>
+        <a href="/skills" style="color:#888; text-decoration:none; display:block; margin: 20px 0;">Marketplace</a>
+    </div>
+    <div class="main">
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:40px;">
+            <h1>Active Agents</h1>
+            <button class="btn-add">+ New Task</button>
+        </div>
+        <div class="glass-panel">
+            <div class="task-row">
+                <div>
+                    <h4 style="margin:0">Daily Summary</h4>
+                    <p style="font-size:0.7rem; color:#666">Gmail → Discord // 08:00 AM</p>
+                </div>
+                <div style="color:var(--neon)">Active</div>
+            </div>
+            <div class="task-row" style="border:none">
+                <div>
+                    <h4 style="margin:0">Crypto Alert</h4>
+                    <p style="font-size:0.7rem; color:#666">Coinbase → WhatsApp // Price Change > 5%</p>
+                </div>
+                <div style="color:#444">Standby</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

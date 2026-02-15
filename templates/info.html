@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PHANE // {{.Title}}</title>
+    <style>
+        :root { --neon: #00ff41; --bg: #050505; --card: #111; }
+        body { background: var(--bg); color: white; font-family: 'Inter', sans-serif; margin: 0; line-height: 1.6; }
+        nav { display: flex; justify-content: space-between; padding: 20px 10%; border-bottom: 1px solid #222; align-items: center; }
+        .logo { font-size: 1.5rem; font-weight: 800; color: var(--neon); text-decoration: none; }
+        .nav-links a { color: #888; text-decoration: none; margin-left: 30px; font-size: 0.9rem; }
+        .content { padding: 100px 20%; }
+        h1 { font-size: 3rem; letter-spacing: -2px; color: var(--neon); }
+        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 50px; }
+        .feature-card { background: var(--card); padding: 30px; border-radius: 12px; border: 1px solid #222; }
+        footer { padding: 50px 10%; text-align: center; color: #444; font-size: 0.8rem; border-top: 1px solid #222; }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="/" class="logo">PHANE</a>
+        <div class="nav-links">
+            <a href="/products">Products</a>
+            <a href="/about">About</a>
+            <a href="/login">Login</a>
+        </div>
+    </nav>
+    <div class="content">
+        <h1>{{.Title}}</h1>
+        <p style="font-size: 1.2rem; color: #ccc;">{{.Description}}</p>
+        
+        <div class="grid">
+            {{range .Features}}
+            <div class="feature-card">
+                <h3 style="color:var(--neon)">{{.Name}}</h3>
+                <p>{{.Text}}</p>
+            </div>
+            {{end}}
+        </div>
+    </div>
+    <footer>© 2026 PHANE AGENTIC SYSTEMS. ALL RIGHTS RESERVED.</footer>
+</body>
+</html>

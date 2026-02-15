@@ -1,0 +1,6 @@
+{
+  "name": "Hue Lights",
+  "icon": "💡",
+  "status": "Ready",
+  "command": "python3 lights.py"
+}

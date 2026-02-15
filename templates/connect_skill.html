@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <title>PHANE // CONNECT</title>
+</head>
+<body style="display:flex; justify-content:center; align-items:center; height:100vh; background:#0B0E14;">
+    <div class="glass-card" style="width: 400px;">
+        <h2 class="neon-text">CONNECT SKILL</h2>
+        <form action="/save-skill" method="POST">
+            <select name="skill_name" style="width:100%; background:rgba(255,255,255,0.05); color:white; padding:12px; border:1px solid var(--border); border-radius:8px; margin-bottom:15px;">
+                <option value="notion">Notion Sync</option>
+                <option value="discord">Discord Bridge</option>
+            </select>
+            <input type="password" name="api_key" placeholder="Enter API Key / Token" style="width:100%; background:rgba(255,255,255,0.05); color:white; padding:12px; border:1px solid var(--border); border-radius:8px; margin-bottom:20px;" required>
+            <button type="submit" class="btn-primary" style="width:100%; padding:12px; border-radius:8px; border:none; background:var(--primary); color:white; font-weight:bold; cursor:pointer;">Securely Link Skill</button>
+        </form>
+        <p style="font-size:0.7rem; color:var(--text-dim); margin-top:15px;">This key will be encrypted with your Master Key and stored locally on this node.</p>
+    </div>
+</body>
+</html>

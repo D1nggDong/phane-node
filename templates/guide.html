@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PHANE // QUICKSTART</title>
+    <style>
+        :root { --neon: #00ff41; --glass: rgba(255, 255, 255, 0.05); --border: rgba(255, 255, 255, 0.1); }
+        body { background: #000; color: white; font-family: 'Inter', sans-serif; margin: 0; padding: 50px 10%; }
+        .glass-card { background: var(--glass); backdrop-filter: blur(15px); border: 1px solid var(--border); padding: 40px; border-radius: 20px; }
+        code { background: #111; padding: 5px 10px; border-radius: 4px; color: var(--neon); font-family: monospace; }
+        .cmd-box { background: #000; border: 1px solid #333; padding: 20px; border-radius: 10px; margin: 20px 0; font-family: monospace; position: relative; }
+        .btn-copy { position: absolute; right: 10px; top: 10px; background: #222; border: 1px solid #444; color: #888; padding: 5px 10px; cursor: pointer; font-size: 0.7rem; }
+    </style>
+</head>
+<body>
+    <div class="glass-card">
+        <h1 style="color:var(--neon); letter-spacing:-2px;">30-SECOND ONBOARDING</h1>
+        <p>Deploy your private agentic node in three simple steps.</p>
+        
+        <h3 style="margin-top:40px;">1. Download & Execute</h3>
+        <p>Open your terminal (CMD on Windows, Terminal on Mac/Linux) and run the installer:</p>
+        <div class="cmd-box">
+            <span style="color:#666;"># This detects your OS and sets up the local vault</span><br>
+            curl -s https://phane.ai/install.sh | bash
+        </div>
+
+        <h3>2. Initialize Vault</h3>
+        <p>The node will ask you to create a <code>Master Key</code>. <strong>Do not lose this.</strong> It is used to encrypt your API keys locally.</p>
+
+        <h3>3. Connect to Dashboard</h3>
+        <p>Once running, visit <code>http://localhost:8080</code> in your browser. Log in, go to the <strong>Marketplace</strong>, and toggle the skills you need.</p>
+
+        <div style="margin-top:50px; border-top: 1px solid #222; padding-top:20px;">
+            <a href="/" style="color:#444; text-decoration:none;">← Back to Network</a>
+        </div>
+    </div>
+</body>
+</html>

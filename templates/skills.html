@@ -1,0 +1,19 @@
+<div class="skill-grid">
+    <div class="glass-card" style="position:relative;">
+        <h3>Notion Bridge</h3>
+        <p style="font-size:0.8rem; color:var(--text-dim);">Sync tasks and databases autonomously.</p>
+        
+        <div style="margin-top:20px; display:flex; gap:10px;">
+            <a href="/connect?skill=notion" class="btn-outline" style="font-size:0.7rem; padding:5px 10px; border:1px solid #444; border-radius:4px; text-decoration:none; color:#888;">Manual Setup</a>
+            
+            <button onclick="oneClick('notion')" class="btn-primary" style="font-size:0.7rem; padding:5px 10px; background:var(--primary); border:none; border-radius:4px; color:white; cursor:pointer;">One-Click (Pro)</button>
+        </div>
+    </div>
+</div>
+
+<script>
+function oneClick(skill) {
+    // This would trigger the Stripe/Subscription checkout if not Pro
+    window.location.href = "/upgrade?reason=" + skill;
+}
+</script>

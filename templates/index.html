@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <title>PHANE // SOVEREIGN AI</title>
+    <style>
+        .hero { height: 80vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; }
+        .feature-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; padding: 50px 0; }
+        .nav { position: absolute; top: 0; width: 100%; padding: 20px 50px; display: flex; justify-content: space-between; box-sizing: border-box; }
+        .btn { padding: 12px 30px; border-radius: 8px; text-decoration: none; font-weight: bold; transition: 0.3s; }
+        .btn-blue { background: var(--primary); color: white; box-shadow: 0 0 20px var(--primary-glow); }
+        .btn-outline { border: 1px solid var(--border); color: white; }
+    </style>
+</head>
+<body style="background: #0B0E14; padding: 0;">
+    <div class="nav">
+        <h2 class="neon-text">PHANE</h2>
+        <div>
+            <a href="/login" class="btn btn-outline" style="margin-right:15px;">Login</a>
+            <a href="/register" class="btn btn-blue">Get Started</a>
+        </div>
+    </div>
+
+    <div class="hero">
+        <h1 style="font-size: 4rem; margin: 0; letter-spacing: -2px;">Sovereign AI for the <span class="neon-text">1%</span></h1>
+        <p style="color: var(--text-dim); max-width: 600px; font-size: 1.2rem; margin: 20px 0;">
+            The first AI Operating System optimized for local hardware. No cloud. No subscription. Just pure agentic power on your 1GB Pi 4B [cite: 2026-02-11].
+        </p>
+        <div style="margin-top: 30px;">
+            <a href="/register" class="btn btn-blue">Deploy Your Node</a>
+        </div>
+    </div>
+
+    <div style="padding: 0 10%; background: rgba(255,255,255,0.02);">
+        <div class="feature-grid">
+            <div class="glass-card">
+                <h3 class="neon-text">24/7 Autonomy</h3>
+                <p style="font-size: 0.9rem; color: var(--text-dim);">The Heartbeat engine runs locally, managing tasks while you sleep.</p>
+            </div>
+            <div class="glass-card">
+                <h3 class="neon-text">AES-256 Vault</h3>
+                <p style="font-size: 0.9rem; color: var(--text-dim);">Your API keys are encrypted and stored only on your physical device [cite: 2026-02-12].</p>
+            </div>
+            <div class="glass-card">
+                <h3 class="neon-text">Resource Lean</h3>
+                <p style="font-size: 0.9rem; color: var(--text-dim);">Zero memory leaks. Uses less than 100MB of RAM at all times [cite: 2026-02-11].</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
