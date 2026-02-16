@@ -6,9 +6,12 @@ import (
 )
 
 func main() {
-	fmt.Println("🛰️ PHANE Sovereign OS - v1.0.0")
-	fmt.Println("1GB RAM Optimization: ACTIVE")
+	// Clean ASCII for the terminal to stop the weird symbols
+	fmt.Println("---------------------------------")
+	fmt.Println("| PHANE Sovereign OS - v1.0.0   |")
+	fmt.Println("| Status: 1GB RAM OPTIMIZED     |")
+	fmt.Println("---------------------------------")
+	fmt.Println("🚀 Node is listening via Cloudflare Tunnel...")
 	
-	// Start the local dashboard and auth listener
 	server.StartServer()
 }
